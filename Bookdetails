@@ -1,0 +1,85 @@
+import java.io.*;
+import java.util.*;
+
+
+class Book{
+     String title,author;
+     double price;
+     int numpages;
+
+   Book(){
+
+   
+     title="Default";
+     author="Default";
+     price=0.0;
+     numpages=0;
+
+
+    }
+
+    void setTitle(String t){
+        this.title=t;
+}
+
+ void setAuthor(String s){
+     this.author=s;
+}
+
+ void setPrice(double p){
+      this.price=p;
+}
+ void setPages(int pa){
+     this.numpages=pa;
+}
+
+  public  String toString(){
+        return title+"\t"+author+"\t"+price+"\t"+numpages+"\n";
+}
+   }
+
+
+ class Bookdetails{
+   public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+       
+        System.out.println("Enter the no of Books\n");
+        int n=sc.nextInt();
+        Book book[]=new Book[n];
+
+         for(int i=0;i<n;i++){ 
+            System.out.println("Enter the Details of the"+(i+1)+"th Book\n");
+           System.out.println("Enter the Title of the Book\n");
+          String t=sc.next();
+
+          System.out.println("Enter the Author of the Book\n");
+          String s=sc.next();
+
+           System.out.println("Enter the Price of the Book\n");
+           double p=sc.nextDouble();
+
+          System.out.println("Enter the Pages of the Book\n");
+          int  pa=sc.nextInt();
+     
+          book[i]=new Book();
+          book[i].setTitle(t);
+          book[i].setAuthor(s);
+          book[i].setPrice(p);
+          book[i].setPages(pa);
+         
+         }
+                  
+          
+        
+        System.out.println("Title\tAuthor\tPrice\tNumberofpages\n");
+
+          for(int i=0;i<n;i++){ 
+           
+              System.out.println(book[i]);
+
+
+}
+}
+
+
+}
