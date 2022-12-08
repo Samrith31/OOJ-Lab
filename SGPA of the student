@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class Sgpa {
+
+
+
+        public static void main(String args[]) {
+
+            Scanner sc=new Scanner(System.in);
+            int credit[]=new int[5];
+            int mark[]=new int[5];
+            int usn;
+            String name;
+            int totalcredit=0;
+            double sgpa=0;
+
+            System.out.println("Enter the Details of the student\n");
+            System.out.println("Enter the usn of the student\n");
+            usn=sc.nextInt();
+
+            System.out.println("Enter the Name of the Student\n");
+            name=sc.next();
+
+
+
+            for(int i=0;i<5;i++) {
+                System.out.println("Enter the Marks of the " + (i + 1) + " st Subject\n");
+                mark[i] = sc.nextInt();
+
+                credit[i] = (mark[i] / 10);
+                totalcredit = totalcredit + credit[i];
+
+
+            }
+
+
+
+
+
+
+                sgpa=sgpa+(totalcredit/5);
+
+
+
+
+                System.out.println("The Name of  the  Student : "+ name);
+                System.out.println("The Usn of  the Student : "+ usn);
+                
+                System.out.println("The SGPA of  the Student : "+sgpa);
+
+
+
+
+
+            }
+        }
+
+
+
+
+
+
